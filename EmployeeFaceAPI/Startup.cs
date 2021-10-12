@@ -31,6 +31,17 @@ namespace EmployeeFaceAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllHeaders",
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                            .AllowAnyHeader()
+                            .AllowAnyMethod();
+                    });
+            });
+
             services.Scan(scan => scan
             .FromApplicationDependencies(a => a.FullName.StartsWith("EmployeeFace"))
             .AddClasses(true)
@@ -69,12 +80,16 @@ namespace EmployeeFaceAPI
                 app.UseDeveloperExceptionPage();
             }
 
+            
+
             app.UseSwagger();
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "EmployeeFaceAPI v1"));
 
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors("AllowAllHeaders");
 
             app.UseAuthorization();
             app.UseMiddleware(typeof(ErrorHandlingMiddleware));

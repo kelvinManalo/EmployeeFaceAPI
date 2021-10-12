@@ -1,5 +1,6 @@
 ﻿using EmployeeFace.BusinessLogic.DataTransferObjects.Face;
 using EmployeeFace.BusinessLogic.LogicCollection.Face;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace EmployeeFaceAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("AllowAllHeaders")]
     public class FaceController : ControllerBase
     {
 
