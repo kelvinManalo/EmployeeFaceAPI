@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace EmployeeFace.BusinessLogic
+﻿namespace EmployeeFace.BusinessLogic
 {
     public class Class1
     {

@@ -1,5 +1,5 @@
-﻿using EmployeeFace.BusinessLogic.DataTransferObjects.PersonGroup;
-using EmployeeFace.BusinessLogic.DataTransferObjects;
+﻿using EmployeeFace.BusinessLogic.DataTransferObjects;
+using EmployeeFace.BusinessLogic.DataTransferObjects.PersonGroup;
 using System.Threading.Tasks;
 
 namespace EmployeeFace.BusinessLogic.LogicCollection.PersonGroup

@@ -6,7 +6,6 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web;
 
 namespace EmployeeFace.Service.ServiceCollection.PersonGroupPerson
 {
@@ -37,7 +36,7 @@ namespace EmployeeFace.Service.ServiceCollection.PersonGroupPerson
 
         }
 
-        public async Task<ApiResult<PersonGroupPersonItemOutput>> GetById(string groupId,string personId)
+        public async Task<ApiResult<PersonGroupPersonItemOutput>> GetById(string groupId, string personId)
         {
 
             var result = await _client.GetAsync($"face/v1.0/persongroups/{groupId}/persons/{personId}");
@@ -87,6 +86,6 @@ namespace EmployeeFace.Service.ServiceCollection.PersonGroupPerson
             return HttpClientWrapper.ProcessRequest<string>(result, responseContents);
         }
 
-       
+
     }
 }

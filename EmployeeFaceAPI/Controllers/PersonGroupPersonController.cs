@@ -49,7 +49,7 @@ namespace EmployeeFaceAPI.Controllers
             return Ok(await _personGroupPersonBusiness.Delete(groupId, personId));
         }
 
-       
+
 
 
     }

@@ -1,6 +1,10 @@
+using EmployeeFace.BusinessLogic.MapperProfile;
 using EmployeeFace.DataAccess.Model;
 using EmployeeFace.DataAccess.Repository;
+using EmployeeFace.Service.ServiceCollection.Face;
 using EmployeeFace.Service.ServiceCollection.PersonGroup;
+using EmployeeFace.Service.ServiceCollection.PersonGroupPerson;
+using EmployeeFaceAPI.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -8,13 +12,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using AutoMapper;
-using EmployeeFace.BusinessLogic.MapperProfile;
-using System.Reflection;
 using System;
-using EmployeeFaceAPI.Middleware;
-using EmployeeFace.Service.ServiceCollection.PersonGroupPerson;
-using EmployeeFace.Service.ServiceCollection.Face;
+using System.Reflection;
 
 namespace EmployeeFaceAPI
 {
@@ -67,7 +66,7 @@ namespace EmployeeFaceAPI
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();                
+                app.UseDeveloperExceptionPage();
             }
 
             app.UseSwagger();

@@ -1,5 +1,5 @@
-﻿using EmployeeFace.Service.Entities.PersonGroup;
-using EmployeeFace.Service.Entities;
+﻿using EmployeeFace.Service.Entities;
+using EmployeeFace.Service.Entities.PersonGroup;
 using Newtonsoft.Json;
 using System;
 using System.Net.Http;
@@ -40,7 +40,7 @@ namespace EmployeeFace.Service.ServiceCollection.PersonGroup
             var responseContents = await result.Content.ReadAsStringAsync();
 
             return HttpClientWrapper.ProcessRequest<string>(result, responseContents);
-            
+
         }
 
         public async Task<ApiResult<string>> Update(PersonGroupServiceUpdateInput input)
@@ -70,7 +70,7 @@ namespace EmployeeFace.Service.ServiceCollection.PersonGroup
 
             var responseContents = await result.Content.ReadAsStringAsync();
 
-            return HttpClientWrapper.ProcessListRequest<PersonGroupServiceListOutput>(result, responseContents);            
+            return HttpClientWrapper.ProcessListRequest<PersonGroupServiceListOutput>(result, responseContents);
 
         }
 

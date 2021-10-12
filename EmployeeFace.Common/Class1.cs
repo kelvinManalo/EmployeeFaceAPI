@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace EmployeeFace.Common
+﻿namespace EmployeeFace.Common
 {
     public class Class1
     {

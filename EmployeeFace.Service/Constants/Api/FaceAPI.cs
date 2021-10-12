@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EmployeeFace.Service.Constants.Api
+﻿namespace EmployeeFace.Service.Constants.Api
 {
     public class FaceAPI
     {
@@ -23,7 +16,7 @@ namespace EmployeeFace.Service.Constants.Api
 
         public static string DeletePerson(int personGroupId, string personId) => $"{_baseUrl}/face/v1.0/persongroups/{personGroupId}/persons/{personId}";
 
-     
+
 
 
 

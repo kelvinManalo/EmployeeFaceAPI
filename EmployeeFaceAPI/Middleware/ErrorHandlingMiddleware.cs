@@ -5,7 +5,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
-using System.ComponentModel;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -76,6 +75,6 @@ namespace EmployeeFaceAPI.Middleware
             return context.Response.WriteAsync(result);
         }
 
-        
+
     }
 }

@@ -14,7 +14,7 @@ namespace EmployeeFace.DataAccess.Model
         [Required(ErrorMessage = "First Name is required")]
         public string FirstName { get; set; }
 
-        public string MiddleName { get; set; }        
+        public string MiddleName { get; set; }
 
         [Required(ErrorMessage = "Person Group Id is required")]
         public int PersonGroupId { get; set; }

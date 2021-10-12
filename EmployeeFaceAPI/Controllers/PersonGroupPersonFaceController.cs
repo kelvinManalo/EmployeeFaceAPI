@@ -2,9 +2,6 @@
 using EmployeeFace.BusinessLogic.LogicCollection.PersonGroupPersonFace;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace EmployeeFaceAPI.Controllers
@@ -23,13 +20,13 @@ namespace EmployeeFaceAPI.Controllers
         }
 
         [HttpPost("Create/{groupId}/persons/{personId}")]
-        public async Task<IActionResult> Create(string groupId,string personId, [FromForm] PersonGroupPersonFaceCreateInputDto input)
+        public async Task<IActionResult> Create(string groupId, string personId, [FromForm] PersonGroupPersonFaceCreateInputDto input)
         {
             return Ok(await _personGroupPersonFaceBusiness.Create(groupId, personId, input));
         }
 
         [HttpPatch("Update/{groupId}/persons/{personId}/persistedFaces/{persistedFaceId}")]
-        public async Task<IActionResult> Update(string groupId, string personId, string persistedFaceId,[FromBody] PersonGroupPersonFaceUpdateInputDto input)
+        public async Task<IActionResult> Update(string groupId, string personId, string persistedFaceId, [FromBody] PersonGroupPersonFaceUpdateInputDto input)
         {
             return Ok(await _personGroupPersonFaceBusiness.Update(groupId, personId, persistedFaceId, input));
         }

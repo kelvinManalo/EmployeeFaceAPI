@@ -33,7 +33,7 @@ namespace EmployeeFace.BusinessLogic.LogicCollection.PersonGroupPersonFace
         {
             var parameters = Mapper.Map<PersonGroupPersonFaceCreateInput>(input);
 
-            var response = await _personGroupPersonFaceService.Create(groupId,personId,parameters);
+            var response = await _personGroupPersonFaceService.Create(groupId, personId, parameters);
             ValidateResponse(response);
 
             var result = Mapper.Map<PersonGroupPersonFaceCreateOutputDto>(response?.Data);

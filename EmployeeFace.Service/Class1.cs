@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace EmployeeFace.Service
+﻿namespace EmployeeFace.Service
 {
     public class Class1
     {

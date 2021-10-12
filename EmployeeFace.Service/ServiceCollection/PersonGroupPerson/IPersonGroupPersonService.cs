@@ -11,7 +11,7 @@ namespace EmployeeFace.Service.ServiceCollection.PersonGroupPerson
         Task<ApiResult<PersonGroupPersonCreateOutput>> Create(string groupId, PersonGroupPersonCreateInput input);
         Task<ApiResult<string>> Update(string groupId, string userId, PersonGroupPersonUpdateInput input);
         Task<ApiResult<string>> Delete(string groupId, string userId);
-       
+
 
 
     }

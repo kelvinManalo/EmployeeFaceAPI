@@ -2,8 +2,8 @@
 using EmployeeFace.BusinessLogic.DataTransferObjects;
 using EmployeeFace.BusinessLogic.DataTransferObjects.PersonGroup;
 using EmployeeFace.Common.Entities;
-using EmployeeFace.Service.Entities.PersonGroup;
 using EmployeeFace.Service.Entities;
+using EmployeeFace.Service.Entities.PersonGroup;
 using EmployeeFace.Service.ServiceCollection.PersonGroup;
 using System.Net;
 using System.Threading.Tasks;
