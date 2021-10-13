@@ -48,6 +48,12 @@ namespace EmployeeFaceAPI.Controllers
             return Ok(await _personGroupBusiness.Update(input));
         }
 
+        [HttpDelete("Delete")]
+        public async Task<IActionResult> Delete([FromQuery] string personGroupId)
+        {
+            return Ok(await _personGroupBusiness.Delete(personGroupId));
+        }
+
         [HttpGet("{groupId}/training")]
         public async Task<IActionResult> Training(string groupId)
         {
